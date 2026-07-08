@@ -1,0 +1,17 @@
+services:
+  interface:
+    build:
+      context: ./interface
+      args:
+        - BACKEND_URL=http://api:8000
+    container_name: scanx
+    ports:
+      - 3300:3000
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  api:
+    build: ./api
+    container_name: scanx_api
+    restart: unless-stopped

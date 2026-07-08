@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "name": "API",
+            "path": "api"
+        },
+        {
+            "name": "Interface",
+            "path": "interface"
+        }
+    ]
+}

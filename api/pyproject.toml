@@ -1,0 +1,16 @@
+[build-system]
+    requires = ["setuptools"]
+    build-backend = "setuptools.build_meta"
+
+[project]
+    name = "scanx"
+    description = "A toolkit for digitizing pictures."
+    authors = [{ name = "Mirrrek" }]
+    dependencies = ["fastapi[standard]"]
+    dynamic = ["version"]
+
+[tool.setuptools]
+    py-modules = ["scanx"]
+
+[tool.fastapi]
+    entrypoint = "scanx.main:app"
